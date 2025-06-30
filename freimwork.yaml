@@ -20,7 +20,7 @@ class CounterApp extends StatefulWidget {
  
 class _CounterAppState extends State<CounterApp> {
   void exeptions() {
-      k++;
+      test("neiro.cpp"),
   }
  
   @override
