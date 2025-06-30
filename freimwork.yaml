@@ -1,0 +1,117 @@
+import 'package:flutter/material.dart';
+ 
+void main() {
+  runApp(MyApp());
+}
+ 
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: CounterApp(),
+    );
+  }
+}
+ 
+class CounterApp extends StatefulWidget {
+  @override
+  _CounterAppState createState() => _CounterAppState();
+}
+ 
+class _CounterAppState extends State<CounterApp> {
+  var k = 0;
+  void exeptions() {
+      k++;
+  }
+ 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Форма ввода данных'),
+      ),
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            Row (children: [ 
+              Expanded(child: Text('Платёжеспособность')),
+              Expanded(child: TextField(
+                decoration: InputDecoration(border: OutlineInputBorder(),),),
+              ),
+            ]),
+            Row (children: [
+              Expanded(child: Text('Социально-экономическая ситуация')),
+              Expanded(child: TextField(
+                decoration: InputDecoration(border: OutlineInputBorder(),),),
+              ),
+            ]),
+            Row (children: [
+              Expanded(child: Text('Численность персонала трудоспособного возраста')),
+              Expanded(child: TextField(
+                decoration: InputDecoration(border: OutlineInputBorder(),),),
+              ),
+            ]),
+            Row (children: [
+              Expanded(child: Text('Среднесписочная численность персонала')),
+              Expanded(child: TextField(
+                decoration: InputDecoration(border: OutlineInputBorder(),),),
+              ),
+            ]),
+            Row (children: [
+              Expanded(child: Text('Численность сотрудников с высшим и среднеспециальным образованием')),
+              Expanded(child: TextField(
+                decoration: InputDecoration(border: OutlineInputBorder(),),),
+              ),
+            ]),
+            Row (children: [
+              Expanded(child: Text('Численность сотрудников совместителей')),
+              Expanded(child: TextField(
+                decoration: InputDecoration(border: OutlineInputBorder(),),),
+              ),
+            ]),
+            Row (children: [
+              Expanded(child: Text('Платёжеспособность')),
+              Expanded(child: TextField(
+                decoration: InputDecoration(border: OutlineInputBorder(),),),
+              ),
+            ]),
+            Row (children: [
+              Expanded(child: Text('Заёмные средства')),
+              Expanded(child: TextField(
+                decoration: InputDecoration(border: OutlineInputBorder(),),),
+              ),
+            ]),
+            Row (children: [
+              Expanded(child: Text('Долгосрочные обязательства')),
+              Expanded(child: TextField(
+                decoration: InputDecoration(border: OutlineInputBorder(),),),
+              ),
+            ]),
+            Row (children: [
+              Expanded(child: Text('Балансовая прибыль/убыток')),
+              Expanded(child: TextField(
+                decoration: InputDecoration(border: OutlineInputBorder(),),),
+              ),
+            ]),
+            Row (children: [
+              Expanded(child: Text('Прибыль от продаж')),
+              Expanded(child: TextField(
+                decoration: InputDecoration(border: OutlineInputBorder(),),),
+              ),
+            ]),
+            Row (children: [
+              Expanded(child: Text('Рейтинг')),
+              Expanded(child: TextField(
+                decoration: InputDecoration(border: OutlineInputBorder(),),),
+              ),
+            ]),
+          ],
+        ),
+      ),
+      floatingActionButton: OutlinedButton(
+        onPressed: exeptions,
+        child: Text('Выполнить'),
+      ),
+    );
+  }
+}
